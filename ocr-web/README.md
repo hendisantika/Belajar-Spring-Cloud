@@ -1,4 +1,4 @@
-#ocr-web
+# ocr-web
 
 Web app for OCR Spring Cloud Demo from my blog. This application uses Zuul from Spring Cloud Netflix to route requests to various services.
 Running
@@ -11,7 +11,7 @@ $ ./mvnw spring-boot:run
 ```
 
 
-###Usage
+### Usage
 
 This app requires Eureka, OCR Races, and OCR Participants to work correctly.
 ````$xslt
