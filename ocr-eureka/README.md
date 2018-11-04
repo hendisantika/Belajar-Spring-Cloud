@@ -1,7 +1,7 @@
-#ocr-eureka
+# ocr-eureka
 
 Eureka server for OCR Spring Cloud sample. It uses Eureka from Spring Cloud Netflix.
-####Running
+#### Running
 
 This is a simple Spring Boot application and can be run simply by cloning the repo.
 ```$xslt
