@@ -21,127 +21,127 @@ import java.util.stream.Collectors;
 @EnableEurekaClient
 @EnableZuulProxy
 public class OcrParticipantsApplication implements CommandLineRunner {
-	private static List<Participant> participants = new ArrayList<>();
+    private static List<Participant> participants = new ArrayList<>();
 
-	public static void main(String[] args) {
-		SpringApplication.run(OcrParticipantsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(OcrParticipantsApplication.class, args);
+    }
 
-	@Override
+    @Override
 
-	public void run(String... arg0) throws Exception {
+    public void run(String... arg0) throws Exception {
 
-		participants.add(new Participant("Hendi", "Santika", "CMH", "S", Arrays.asList("212", "411")));
+        participants.add(new Participant("Hendi", "Santika", "CMH", "S", Arrays.asList("212", "411")));
 
-		participants.add(new Participant("Uzumaki", "Naruto", "KNH", "S", Arrays.asList("411")));
+        participants.add(new Participant("Uzumaki", "Naruto", "KNH", "S", Arrays.asList("411")));
 
-	}
+    }
 
-	@RequestMapping("/")
+    @RequestMapping("/")
 
-	public List<Participant> getParticipants() {
+    public List<Participant> getParticipants() {
 
-		return participants;
+        return participants;
 
-	}
+    }
 
-	@RequestMapping("/races/{id}")
+    @RequestMapping("/races/{id}")
 
-	public List<Participant> getParticipants(@PathVariable String id) {
+    public List<Participant> getParticipants(@PathVariable String id) {
 
-		return participants.stream().filter(p -> p.getRaces().contains(id)).collect(Collectors.toList());
+        return participants.stream().filter(p -> p.getRaces().contains(id)).collect(Collectors.toList());
 
-	}
+    }
 }
 
 class Participant {
 
-	private String firstName;
+    private String firstName;
 
-	private String lastName;
+    private String lastName;
 
-	private String homeState;
+    private String homeState;
 
-	private String shirtSize;
+    private String shirtSize;
 
-	private List<String> races;
+    private List<String> races;
 
-	public Participant(String firstName, String lastName, String homeState,
+    public Participant(String firstName, String lastName, String homeState,
 
-					   String shirtSize, List<String> races) {
+                       String shirtSize, List<String> races) {
 
-		super();
+        super();
 
-		this.firstName = firstName;
+        this.firstName = firstName;
 
-		this.lastName = lastName;
+        this.lastName = lastName;
 
-		this.homeState = homeState;
+        this.homeState = homeState;
 
-		this.shirtSize = shirtSize;
+        this.shirtSize = shirtSize;
 
-		this.races = races;
+        this.races = races;
 
-	}
+    }
 
-	public String getFirstName() {
+    public String getFirstName() {
 
-		return firstName;
+        return firstName;
 
-	}
+    }
 
-	public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
 
-		this.firstName = firstName;
+        this.firstName = firstName;
 
-	}
+    }
 
-	public String getLastName() {
+    public String getLastName() {
 
-		return lastName;
+        return lastName;
 
-	}
+    }
 
-	public void setLastName(String lastName) {
+    public void setLastName(String lastName) {
 
-		this.lastName = lastName;
+        this.lastName = lastName;
 
-	}
+    }
 
-	public String getHomeState() {
+    public String getHomeState() {
 
-		return homeState;
+        return homeState;
 
-	}
+    }
 
-	public void setHomeState(String homeState) {
+    public void setHomeState(String homeState) {
 
-		this.homeState = homeState;
+        this.homeState = homeState;
 
-	}
+    }
 
-	public String getShirtSize() {
+    public String getShirtSize() {
 
-		return shirtSize;
+        return shirtSize;
 
-	}
+    }
 
-	public void setShirtSize(String shirtSize) {
+    public void setShirtSize(String shirtSize) {
 
-		this.shirtSize = shirtSize;
+        this.shirtSize = shirtSize;
 
-	}
+    }
 
-	public List<String> getRaces() {
+    public List<String> getRaces() {
 
-		return races;
+        return races;
 
-	}
+    }
 
-	public void setRaces(List<String> races) {
+    public void setRaces(List<String> races) {
 
-		this.races = races;
+        this.races = races;
 
-	}
+    }
 
 }
