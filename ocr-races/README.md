@@ -1,17 +1,17 @@
-#ocr-races
+# ocr-races
 
-####Running
+#### Running
 ```$xslt
 $ git clone https://github.com/hendisantika/belajar-spring-cloud/ocr-races
 $ cd ocr-races
 $ ./mvnw spring-boot:run
 ```
 
-####Using
+#### Using
 
 This service has 2 API endpoints
 
-####Race Data
+#### Race Data
 
 To return race data hit the root of the application, for example
 ```$xslt

@@ -10,4 +10,4 @@ server:
 zuul:
   routes:
     races: /races/**
-    participants: /paticipants/**
+    participants: /participants/**
